@@ -45,8 +45,8 @@ jobs:
 
       - name: Run Twister on GPIO sample
         run: |
-          source zephyr-env.sh
           cd ${HOME}/zephyrproject/zephyr
+          source zephyr-env.sh
           pwd
           echo $ZEPHYR_SDK_INSTALL_DIR
           ./scripts/twister --device-testing --hardware-map hwmap.yml -T tests/drivers/gpio/gpio_api_1pin -vvv
