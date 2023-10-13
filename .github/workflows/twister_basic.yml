@@ -14,9 +14,9 @@ jobs:
     runs-on: [self-hosted, has-max32666fthr2]
 
     env:
-      ZEPHYR_SDK_INSTALL_DIR: ${HOME}/zephyr-sdk-0.16.3
-      Zephyr-sdk: ${HOME}/zephyr-sdk-0.16.3
-      Zephyr-sdk_DIR: ${HOME}/zephyr-sdk-0.16.3/cmake
+      ZEPHYR_SDK_INSTALL_DIR: /home/ses/zephyr-sdk-0.16.3
+      Zephyr-sdk: /home/ses/zephyr-sdk-0.16.3
+      Zephyr-sdk_DIR: /home/ses/zephyr-sdk-0.16.3/cmake
 
     steps:
       - uses: actions/checkout@v3
@@ -45,7 +45,7 @@ jobs:
 
       - name: Run Twister on GPIO sample
         run: |
-          cd ${HOME}/zephyrproject/zephyr
+          cd /home/ses/zephyrproject/zephyr
           source zephyr-env.sh
           pwd
           echo $ZEPHYR_SDK_INSTALL_DIR
@@ -57,5 +57,5 @@ jobs:
         with:
           name: twister-artifacts
           path: |
-            cd ${HOME}/zephyrproject/zephyr
+            cd /home/ses/zephyrproject/zephyr
             twister-out/**/*.log
