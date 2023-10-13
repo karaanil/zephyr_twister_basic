@@ -31,5 +31,5 @@ jobs:
         with:
           name: twister-artifacts
           path: |
-            cd /home/ses/zephyrproject/zephyr
+            cd ~/zephyrproject/zephyr
             twister-out/**/*.log
